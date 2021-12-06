@@ -8,16 +8,6 @@
   background: darkorange;
 
 }
-.l{display:flex;}
- @media only screen and (max-width:600px) {
-  .l{
-    font-size:1vw;
-    flex-direction:row;
-    margin-left: 0;
-    width:100%; 
-    height:100%;             
-  }
-}
 
 li a{
   color: rgb(0, 10, 1);
@@ -31,45 +21,62 @@ li a{
 
 .box{
 position: relative;
+top: 54px;
 border-radius: 18px;
 overflow: hidden;
 width: 100%;
 
 height: 900px;
-display:flex;
+
 }
 .box img{
-  position:absolute;
+   position:absolute;
   margin-left: 30%;
   width: 70%;
-  height: 80%;
+  /* height: 80%; */
   border-radius: 18px;
   z-index: 1;
-}
 
- @media only screen and (max-width:600px) {
-  .box img{
-    font-size:1vw;
-    flex-direction:row;
-    margin-left: 0;
-    width:100%; 
-    height:100%;             
-  }
-}
 
-.contain{
-  box-shadow:0 3px 5px #efefef ;
-background-color: #fff;
-margin: 10px;
-border-radius: 18px;
-width: 500px;
-height: 250px;
-position: absolute;
-top: 100px;
-left: 250px;
-z-index: 1;
-padding: 0px 25px 20px 30px;
-color: black;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.text-decoration-none{
+text-decoration: none!important;
+}
+/* Font Awesome Icons have variable width. Added fixed width to fix that.*/
+.icon-width { width: 2rem;}
+.logo-img{
+  width: 12%;
+  margin-top: 2px;
+  float: left;
+}
+.navbar-inverse {
+  background-color: #fff !important;
+  border-color: #eee6e6 !important;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #000 !important;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color: #000 !important;
+  background-color: #ddd9d9 !important;
+}
+.contain {
+  /* box-shadow: 0 3px 5px #efefef; */
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 18px;
+  width: 435px;
+  height: 250px;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  box-shadow: 2px 2px 2px 2px #2570b3;
+  z-index: 1;
+  padding: 0px 25px 20px 30px;
+  color: black;
 }
 
 .big-text{
@@ -115,6 +122,64 @@ font-weight: bold;
  .row2{
    display: flex;
  }
+
+ /* *********************************
+           Variables
+  ********************************** */
+/* *********************************
+   Some Style Overrides on Bootstrap
+  ********************************** */
+.navbar-inverse {
+  background: rgba(215, 227, 230, 0.767);
+  border-bottom: none;
+}
+
+.navbar-inverse .navbar-toggle {
+  border: 1px solid #333;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: transparent;
+}
+@media (max-width: 767px) {
+  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    background: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: black;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: #22F;
+}
+
+/* *********************************
+           Toolbar Logo
+  ********************************** */
+.small-logo-container {
+  padding-top: 50px;
+  height: 50px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.small-logo {
+  color: white;
+  font-size: 2.5em;
+  padding-bottom: 2px;
+}
+
+/* *********************************
+           Big Logo
+  ********************************** */
+
+
+
+ 
+
  @media only screen and (max-width:600px) {
   .row2{
     font-size:3vw;
@@ -277,6 +342,112 @@ box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 transition: all 250ms ease-in-out 0s;
 
 }
+
+.navbar-nav{
+  float: right !important;
+}
+
+@media only screen and (max-width:1024px) {
+  .box img{
+    height: 85%;
+  }
+  .contain{
+    top: 150px;
+    left: 45px;
+  }
+  .box{
+    height: 700px;
+  }
+  .new1 p{
+    font-size: 16px !important;
+  }
+  .container1 h1{
+    margin-top: 525px !important;
+  }
+  .column{
+    width: 80px;
+  }
+  .column iframe{
+    min-width: 250px !important;
+  }
+}
+
+@media only screen and (max-width: 576px){
+  .navbar-inverse {
+    height: 60px;
+  }
+  .logo-img {
+    width: 36%;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  .navbar-toggle{
+    background-color: #fff !important;
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+  }
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #000 !important;
+  }
+  .navbar-nav {
+    margin: 0px !important;
+    width: 100%;
+  }
+  .box {
+    height: 490px;
+    top: 58px;
+  }
+  .box .img {
+    display: flex;
+    justify-content: center;
+  }
+  .box img {
+    margin: 10px 15px;
+    height: 45%;
+    width: 100%;
+    margin-top: 0px;
+  }
+  .contain {
+    top: 220px;
+    left: 0%;
+    width: 300px;
+    height: 160px;
+    padding: 0px 15px 5px 15px;
+  }
+  .big-text {
+    font-size: 27px;
+    margin: 10px 0 5px 0;
+  }
+  .big-text2 {
+    font-size: 25px;
+    margin: 5px 0 10px 0;
+  }
+  .new1{
+    margin: 20px 0;
+  } 
+  .container1 h1 {
+    margin-top: 30px !important;
+  }
+  .container2 {
+    margin-top: 20px;
+  }
+  .column{
+    width:unset;
+  }
+  .column iframe{
+    width: calc(100% - 1px) !important;
+  }
+}
+@media only screen and (max-width: 380px) {
+  /* .box img {
+    height: 37%;
+    width: 80%;
+  } */
+  .contain{
+    width: 275px;
+  }
+}
+
 
 
 
